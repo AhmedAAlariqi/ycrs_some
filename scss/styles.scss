@@ -1,0 +1,152 @@
+/* --bs-breadcrumb-divider: '|'; */
+@import "../node_modules/bootstrap/scss/functions"; // Required
+
+@import "../node_modules/bootstrap/scss/variables"; // Required
+@import "../node_modules/bootstrap/scss/maps"; // Required
+
+.job-card {
+    border-width: 2px;
+    border-color: $black;
+
+    .card-footer {
+
+        // max-height: 24px;
+        .btn {
+            font-size: 12px;
+
+            img {
+                height: 18px !important;
+                width: 18px !important;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    }
+}
+
+.search_input_group {
+    .search_icon_btn {
+        position: absolute;
+        right: 0;
+        z-index: 5;
+        border: none;
+        background-color: transparent;
+    }
+
+    .search_icon {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.register_block_main {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding-top: 30vh;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '|';
+}
+
+.breadcrumb-item {
+
+    &:not(.active) {
+        text-transform: uppercase;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+
+.btn,
+.nav-item {
+    text-transform: uppercase;
+}
+.nav-pills,.nav-tabs.nav-tabs-line{
+    .nav-link{
+        color: inherit;
+    }
+
+} 
+
+// .job_apply_bg {
+//     background-image: url(../ycrs/assets/images/Job-Svg.svg);
+//     background-repeat: no-repeat;
+//     position: absolute;
+//     height: -webkit-fill-available;
+//     left: 40px;
+//     max-width: 100%;
+//     background-size: contain;
+//     z-index: -1;
+// }
+
+.input-group-text{
+    min-width: 50px;
+    justify-content: center;
+}
+
+.intl-tel-input {
+    display: table-cell;
+}
+
+.intl-tel-input .selected-flag {
+    z-index: 4;
+}
+
+.intl-tel-input .country-list {
+    z-index: 5;
+}
+
+.input-group .intl-tel-input .form-control {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+}
+
+.seprater {
+    display: grid;
+    text-align: center;
+    padding: 1rem 0;
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-top: -10px;
+        position: relative;
+        background: rgb(255 255 255);
+        top: 25px;
+        padding: 0 24px;
+        /* \    font-size: 12px; */
+        color: #000000;
+        z-index: 5000;
+    }
+}
+.block_header_tittle{}
+
+.nav-tabs.nav-tabs-line 
+    {
+        border-bottom: solid 3px rgba(0, 0, 0, 0.1);
+        .nav-item {
+            margin-bottom: -2px;
+            .nav-link{
+                border: transparent;            
+                &.active{
+                background: transparent;
+                color: var(--bs-primary);
+                border-bottom: 3px solid var(--bs-primary);
+            }
+        }
+            
+            :first-child .nav-link {
+                padding-left: 0;
+            }
+        }
+}

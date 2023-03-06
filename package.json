@@ -1,0 +1,85 @@
+{
+  "name": "ycrs",
+  "version": "5.2.3",
+  "private": true,
+  "description": "Demo project for building a Bootstrap powered site via npm.",
+  "author": "mdo",
+  "homepage": "https://getbootstrap.com/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twbs/bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twbs/bootstrap/issues"
+  },
+  "scripts": {
+    "server": "live-server --port=3000",
+    "start": "npm-run-all --parallel watch server",
+    "watch": "npm-run-all --parallel watch-*",
+    "build": "npm run css",
+    "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint-*",
+    "css-purge": "purgecss --keyframes --css assets/css/starter.css --content index.html \"node_modules/bootstrap/js/dist/{util,modal}.js\" --output assets/css/",
+    "css": "npm-run-all css-compile css-prefix",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:dist/css/",
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+    "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
+    "css-lint-vars": "fusv scss/ site/assets/scss/",
+    "css-minify": "npm-run-all --aggregate-output --parallel css-minify-*",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*rtl*.css\"",
+    "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
+    "css-prefix": "npm-run-all --aggregate-output --parallel css-prefix-*",
+    "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
+    "css-prefix-examples": "postcss --config build/postcss.config.js --replace \"site/content/**/*.css\"",
+    "css-prefix-examples-rtl": "cross-env-shell NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"site/content/docs/$npm_package_config_version_short/examples/\" --ext \".rtl.css\" --base \"site/content/docs/$npm_package_config_version_short/examples/\" \"site/content/docs/$npm_package_config_version_short/examples/{blog,carousel,dashboard,cheatsheet}/*.css\" \"!site/content/docs/$npm_package_config_version_short/examples/{blog,carousel,dashboard,cheatsheet}/*.rtl.css\"",
+    "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+    "watch-css-dist": "nodemon --watch dist/css/ --ext css --ignore \"dist/css/*.rtl.*\" --exec \"npm run css-rtl\"",
+    "watch-css-docs": "nodemon --watch site/assets/scss/ --ext scss --exec \"npm run css-lint\"",
+    "watch-js-main": "nodemon --watch js/src/ --ext js --exec \"npm-run-all js-lint js-compile\"",
+    "watch-js-docs": "nodemon --watch site/assets/js/ --ext js --exec \"npm run js-lint\"",
+    "dist": "npm-run-all --aggregate-output --parallel css js",
+    "test": "npm-run-all lint dist js-test docs-build docs-lint",
+    "netlify": "cross-env-shell HUGO_BASEURL=$DEPLOY_PRIME_URL npm-run-all dist release-sri docs-build"
+
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "css",
+    "javascript",
+    "starter",
+    "template"
+  ],
+
+  "peerDependencies": {
+    "@popperjs/core": "^2.11.6"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.9.1",
+    "jquery": "^3.6.2",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "bundlewatch": "^0.3.3",
+    "clean-css-cli": "^5.6.1",
+    "cross-env": "^7.0.3",
+    "lockfile-lint": "^4.9.6",
+    "live-server": "^1.2.2",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "purgecss": "^4.1.3",
+    "rollup": "^3.7.5",
+    "rollup-plugin-istanbul": "^4.0.0",
+    "rtlcss": "^4.0.0",
+    "sass": "^1.57.1",
+    "shelljs": "^0.8.5",
+    "stylelint": "^14.16.0",
+    "stylelint-config-twbs-bootstrap": "^7.0.0",
+    "terser": "5.16.0",
+    "vnu-jar": "22.9.29"
+  }
+}
