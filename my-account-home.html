@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="generator" content="">
+  <title>My Account</title>
+  <!-- Headeing Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="scss/app-theme.css" rel="stylesheet">
+  <link href="scss/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="page_header align-items-end bg-dark d-flex justify-content-center" style="min-height: 45vh;">
+    <div class="container h-100 ">
+      <div class="row text-white">
+        <h3 class=" mb-3">Ahmed </h3>
+        <div class="col-md-12 mb-0">
+          <ul class="nav nav-tabs nav-tabs-line text-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./my-account.html">
+                Applyement
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="my-accounts-settings.html">
+                My Setting
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12">
+          <ul class="nav nav-pills text-center">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#tab-jobs" aria-current="page">
+                Jobs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#tab-tenders">
+                Tenders
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <!-- tab content Jobs -->
+          <div class="col-md-6 tab-pane show active" id="tab-jobs">
+            <div class="row g-4">
+              <h5 class="block_header_tittle text-secondary"> JOBS</h5>
+              <div class="col-md-12">
+                <div class="card job-card">
+                  <div class="card-body">
+                    <div class="d-flex gap-3 justify-content-between">
+                      <div class="position-relative">
+                        <span class="small">
+                          2 days ago
+                          <span class="text-uppercase">
+                            <i class="">
+                              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.375 14H23.625" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" /></svg>
+                            </i>
+                            Type of Job
+                          </span>
+                        </span>
+                        <a class="stretched-link" href="job-view.html"></a>
+
+                        <h6 class="card-tittle mb-2">Accounts Payable Officer </h6>
+                      </div>
+                      <a href="job-view.html" class="btn btn-dark h-100">
+                        <span class="">Edit</span>
+                      </a>
+                    </div>
+                    <span class="badge bg-opacity-25 bg-secondary text-dark">Pending</span>
+                  </div>
+
+                  <div class="card-footer bg-white border-0 text-uppercase d-flex gap-3 pt-1 pb-3 ">
+                    <button class="btn btn-outline-dark btn-sm"> <img class="" height="20px" width="20px"
+                        src="./assets/icons/MapPinLine.svg" alt=""> Multiple citeies </button>
+                    <small class="d-flex align-items-center small btn-sm mb-0 ">
+                      <span class="text-secondary">Applied On : </span> <span class=""> 21 , FEB 2023</span>
+                    </small>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- tab content Tenders -->
+          <div class="col-md-6 tab-pane" id="tab-tenders">
+            <div class="row g-4">
+              <h5 class="block_header_tittle text-secondary"> TENDERS</h5>
+              <div class="col-md-12">
+                <div class="card job-card border-success">
+                  <div class="card-body">
+                    <a class="stretched-link" href="tenders-view.html"></a>
+                    <div class="d-flex gap-3 justify-content-between">
+                      <div class="position-relative">
+
+                        <span class="small">2 days ago
+                          <span class="text-uppercase">
+                            <i class="">
+                              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.375 14H23.625" stroke="currentcolor" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" /></svg>
+                            </i>
+                            Type Of Tender
+                          </span>
+                        </span>
+
+                        <h6 class="card-tittle mb-2">Accounts Payable Officer </h6>
+                      </div>
+
+                    </div>
+
+                    <span class="badge bg-opacity-75 bg-success">Aprroved</span>
+
+                    <p class="card-text text-truncate my-3">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quaerat fugiat excepturi ex
+                      maiores dicta repudiandae labore provident nihil tenetur exercitationem necessitatibus nam ipsum
+                      natus possimus maxime recusandae, inventore sed.
+                    </p>
+                  </div>
+
+                  <div class="card-footer bg-white border-0 text-uppercase d-flex gap-3 pt-1 pb-3 ">
+                    <button class="btn btn-outline-dark btn-sm"> <img class="" height="20px" width="20px"
+                        src="./assets/icons/MapPinLine.svg" alt=""> Multiple citeies </button>
+                    <small class="d-flex align-items-center small btn-sm mb-0 ">
+                      <span class="text-secondary">Applied On : </span> <span class=""> 21 , FEB 2023</span>
+                    </small>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+  <footer class="mt-5" style="height: 50vh;"></footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
