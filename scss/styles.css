@@ -112,4 +112,15 @@
 }
 .nav-tabs.nav-tabs-line .nav-item :first-child .nav-link {
   padding-left: 0;
+}
+
+input :required {
+  border-color: blue;
+}
+
+.form-apply-row > * {
+  padding-left: 0;
+  padding-right: 0;
+  /* margin-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: calc(var(--bs-gutter-x) * 0.5); */
 }/*# sourceMappingURL=styles.css.map */

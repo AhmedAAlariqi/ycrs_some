@@ -131,6 +131,8 @@
 }
 .block_header_tittle{}
 
+
+
 .nav-tabs.nav-tabs-line 
     {
         border-bottom: solid 3px rgba(0, 0, 0, 0.1);
@@ -149,4 +151,17 @@
                 padding-left: 0;
             }
         }
+}
+
+input {
+    :required{
+        border-color: blue;
+    }
+}
+
+.form-apply-row >*{
+    padding-left: 0;
+    padding-right: 0;
+    /* margin-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: calc(var(--bs-gutter-x) * 0.5); */
 }
