@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Voulnteer | Apply </title>
+    <!-- Headeing Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link href="scss/app-theme.css" rel="stylesheet">
+    <link href="scss/styles.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css'>
+
+</head>
+
+<body class="my-5">
+
+
+    <main class="">
+        <article class="">
+
+            <!-- content -->
+            <main class="container mt-5">
+                <div class="row g-4">
+                    <div class="col-md-12 d-grid text-center">
+                        <i class="my-2">
+                            <svg class="text-danger" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.375 14H23.625" stroke="currentcolor" stroke-width="4" stroke-linecap="round"
+                                stroke-linejoin="round" /></svg>
+                          </i>                        
+                          <h1 class="text-center text-secondary fw-light">Join Us <br> and Make Different</h1>
+                    </div>
+                </div>
+    
+                <div class="row g-4 position-relative justify-content-center">
+                    <!-- image -->
+                    <div class="col-md-7 order-sm-last d-flex align-items-center justify-content-center " style="  position: absolute; z-index: -1; right: 10%; top: 0; bottom: 0;">
+                        <img class="img-fluid h-75" style="object-fit: contain;" src="./assets/images/Voulnteer.png" alt="">
+                    </div>
+                    <!-- form -->
+                    <div class="col-md-5 ">
+                        <form class="bg-white d-flex flex-column border border-dark p-4 ">
+    
+                            <P class="text-uppercase fw-bold" style="font-size:">Personal Data </P>
+    
+                            <div class="col-md-12 mb-3">
+                                <label for="formFile" class="form-label">Your Picture (Optional)</label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+    
+                            <div class="col-md-12 form-floating mb-3">
+                                <input type="text" placeholder="Full Name" class="form-control" value="Maged Ali Ahmed"
+                                    id="FullName" required>
+                                <label for="FullName" class="form-label">Full Name</label>
+                            </div>
+    
+                            <div class="col-md-12 form-floating mb-3">
+                                <input type="email" placeholder="Email" class="form-control" value="maged@email.com"
+                                    id="UserEmail" required>
+                                <label for="inputEmail4" class="form-label">Email</label>
+                            </div>
+    
+                            <!-- User Phone -->
+                            <div class="col-md-12 mb-3">
+                                <div class="input-group input-group-floating-icon">
+                                    <span class="input-group-text bg-white">+967</span>
+                                    <div class="form-floating">
+                                        <input type="tel" placeholder="Phone Number" id="UserPhone" value="733333333"
+                                            class="form-control" required>
+                                        <label for="UserPhone" class="form-label">Phone Number</label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-12">
+                                <p>Date of birth</p>
+                            </div>
+                            <!-- date of birth row -->
+                            <div class="d-block d-md-flex justify-content-between align-items-center gx-3 mb-3 w-100">
+                                <div class="col-md-3 form-floating my-0 my-md-3">
+                                    <input type="number" placeholder="Day" class="form-control border-0 border-end"
+                                        id="day">
+                                    <label for="day" class="form-label">day</label>
+    
+                                </div>
+                                <div class="col-md-5 form-floating my-0 my-md-3">
+                                    <!-- <input type="text" placeholder="month" class="form-control" id="month"> -->
+                                    <select class="form-select border-0 border-end" id="month">
+                                        <option selected="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                    <label for="month" class="form-label">Month</label>
+    
+                                </div>
+    
+                                <div class="col-md-4 form-floating my-0 my-md-3">
+                                    <input type="number" placeholder="Year" class="form-control border-0 border-end"
+                                        id="year">
+                                    <label for="year" class="form-label">Year</label>
+    
+                                </div>
+                            </div>
+    
+                            <div class="d-flex justify-content-between mb-3">
+                                <div class=" form-floating me-3 flex-fill">
+                                    <input type="text" placeholder="Country" class="form-control" value="Yemen"
+                                        id="Country" disabled>
+                                    <label for="Country" class="form-label">Country</label>
+                                </div>
+    
+                                <div class=" form-floating me-3 flex-fill">
+                                    <input type="text" placeholder="City" class="form-control" id="inputCity" required>
+                                    <label for="inputCity" class="form-label">City</label>
+                                </div>
+    
+                                <div class="form-floating flex-fill">
+                                    <input type="text" placeholder="Street Address" class="form-control" required
+                                        id="inputAddress">
+                                    <label for="inputAddress" class="form-label">Street Address</label>
+                                </div>
+                            </div>
+                            <!-- -------------------------------------------------------------------------------------------------------- -->
+                            
+                            <div class="col-md-12 form-floating mb-3">
+                                <textarea class="form-control" placeholder="Notes" name="Notes" id="Notes" cols="30" rows="10">
+                                    
+                                </textarea>
+                                <label for="Notes" class="form-label">Notes</label>
+                            </div>
+                            <hr class="border-dark">
+                            
+                            <div class="col-12 form-floating mb-3">
+                                <button class="btn btn-lg btn-dark px-4 w-100" data-bs-toggle="modal"
+                                    data-bs-target="#ThankYouForApply"> Get Involved </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- for sizing row -->
+                    <div class="col-md-4"></div>
+
+                </div>
+            </main>
+
+            
+        </article>
+    </main>
+    
+</body>
+
+
+</html>
