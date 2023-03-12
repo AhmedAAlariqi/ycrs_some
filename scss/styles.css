@@ -93,7 +93,7 @@
   padding: 0 24px;
   /* \    font-size: 12px; */
   color: #000000;
-  z-index: 5000;
+  z-index: 1;
 }
 
 .nav-tabs.nav-tabs-line {
